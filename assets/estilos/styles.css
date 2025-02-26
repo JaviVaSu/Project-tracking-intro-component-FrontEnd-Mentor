@@ -1,0 +1,331 @@
+:root{
+    --Red: rgb(255, 92, 92);
+    --VeryDarkBlue: rgb(36, 41, 66);
+    --DarkGrayishBlue: rgb(91, 95, 113);
+    --GrayishBlue: rgb(160, 161, 172);
+    --LightGrayishBlue: rgb(238, 243, 246);
+    --White: rgb(255, 255, 255);
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navdesktop{
+    display: none;
+}
+.navmobile{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.imageintro{
+    width: 100%;
+}
+.imageintro img{
+    width: 145%;
+    padding: 4rem 0 0 0;
+}
+.infointro{
+    width: 100%;
+    padding: 3rem 2rem;
+}
+.infointro .intro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.infointro .intro .selected{
+    font-family: "Barlow Condensed", serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--White);
+    background-color: var(--VeryDarkBlue);
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    margin-right: 1rem;
+}
+.infointro .intro p{
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--GrayishBlue);
+}
+.infointro h1{
+    font-family: "Barlow Condensed", serif;
+    font-weight: 700;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--VeryDarkBlue);
+    margin: 0;
+}
+.infointro .desc{
+    width: 100%;
+}
+.infointro .desc p{
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: var(--DarkGrayishBlue);
+    margin: 0.8rem 0;
+}
+.infointro .buttondemo{
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+}
+.infointro .buttondemo a{
+    background-color: var(--Red);
+    padding: 1.5rem 2rem;
+    color: var(--White);
+    font-family: "Barlow Condensed", serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.infointro .buttondemo a:hover{
+    opacity: 70%;
+}
+.infointro .buttondemo p{
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--GrayishBlue);
+    text-transform: uppercase;
+}
+.square{
+    position: absolute;
+    width: 50vw;
+    height: 65vh;
+    top: 0;
+    right: 0;
+    background-color: var(--LightGrayishBlue);
+    border-bottom-left-radius: 5rem;
+    z-index: -1;
+}
+.menu{
+    display: none;
+    position: absolute;
+    width: 80%;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--White);
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    box-shadow: 2px 2px 14px 3px rgba(59,56,59,1);
+    z-index: 5;
+}
+.menu a{
+    font-family: "Barlow Condensed", serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--VeryDarkBlue);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.menu .login{
+    color: var(--GrayishBlue);
+}
+.menu hr{
+    width: 80%;
+}
+
+@media (min-width: 768px) {
+    body{
+        width: 100%;
+    }
+    .navmobile img{
+        width: 5%;
+    }
+    .imageintro img{
+        width: 130%;
+        margin-left: 5rem;
+    }
+    .infointro{
+        width: 60%;
+        margin: auto;
+    }
+    .infointro .intro .selected{
+        font-size: 2.2rem;
+    }
+    .infointro .intro p{
+        font-size: 2.2rem;
+    }
+    .infointro h1{
+        font-size: 4.6rem;
+    }
+    .infointro .desc p{
+        font-size: 2.6rem;
+    }
+    .infointro .buttondemo{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .infointro .buttondemo a, .infointro .buttondemo p{
+        font-size: 2.2rem;
+    }
+    .square{
+        height: 69vh;
+    }
+    .menu{
+        top: 8rem;
+        padding: 2rem 0;
+    }
+    .menu a{
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navmobile{
+        display: none;
+    }
+    .navdesktop{
+        width: 100%;
+        padding: 2rem 4rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navdesktop .logo{
+        width: 55%;
+    }
+    .navdesktop img{
+        width: 10%;
+    }
+    .menudesktop{
+        width: 45%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menudesktop a{
+        font-family: "Barlow Condensed", serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--VeryDarkBlue);
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .menudesktop .login{
+        color: var(--GrayishBlue);
+    }
+    .menudesktop a:hover{
+        text-decoration: underline;
+    }
+    .introdesktop{
+        padding: 8rem 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .introdesktop .imageintro{
+        order: 1;
+    }
+    .imageintro img{
+        width: 150%;
+    }
+    .infointro{
+        width: 95%;
+    }
+    .infointro .intro p{
+        font-size: 2.6rem;
+    }
+    .infointro h1{
+        font-size: 5.2rem;
+    }
+    .infointro .buttondemo{
+        width: 90%;
+        justify-content: space-between;
+    }
+    .infointro .buttondemo a, .infointro .buttondemo p{
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navdesktop img{
+        width: 7%;
+    }
+    .menudesktop{
+        width: 35%;
+        padding-right: 5rem;
+    }
+    .menudesktop a{
+        font-size: 1.6rem;
+    }
+    .introdesktop{
+        padding: 2rem 0 3rem 0;
+    }
+    .imageintro img{
+        width: 130%;
+    }
+    .infointro .buttondemo{
+        width: 70%;
+    }
+    .square{
+        height: 60vh;
+    }
+}
+
+@media (min-width: 1728px) {
+    .menudesktop a{
+        font-size: 2rem;
+    }
+    .introdesktop{
+        padding: 14rem 0;
+    }
+    .infointro .intro p{
+        font-size: 3rem;
+    }
+    .infointro h1{
+        font-size: 6rem;
+    }
+}
