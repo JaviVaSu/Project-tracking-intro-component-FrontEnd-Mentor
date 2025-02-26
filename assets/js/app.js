@@ -17,4 +17,11 @@ $(document).ready(function() {
                 break
         }
     })
+
+    $(document).on('scroll', function() {
+        if ($(this).scrollLeft() !== 0) {
+          $(this).scrollLeft(0);
+        }
+    });
+
 });
